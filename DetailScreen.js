@@ -1,14 +1,26 @@
 import React from 'react';
-import {Button, View, Text} from 'react-native';
+import {StyleSheet, Button, View, Text} from 'react-native';
 
-function DetailScreen(props) {
+function DetailScreen({navigation}) {
     return (
         <View style={{flex:1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'green'}}>
             <Text>Details Screen</Text>
-            <Button 
-                title="Ir a Detalle"
-                onPress={() => navigation.navigate('Details')}
-            />
+
+            <View>
+                <Button 
+                    title="Atrás"
+                    onPress={() => navigation.goBack()}
+                />
+                <Button 
+                    title="Home"
+                    onPress={() => navigation.navigate('Home')}
+                />
+                <Button 
+                    title="Ir a Detalle"
+                    onPress={() => navigation.push('Details')}
+                />
+            </View>
+            
         </View>
     );
 }
