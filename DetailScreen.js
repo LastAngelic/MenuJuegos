@@ -1,18 +1,16 @@
 import React from 'react';
 import {Button, View, Text} from 'react-native';
-import styles from './styles';
 
-function HomeScreen({navigation}) {
+function DetailScreen(props) {
     return (
-        <View style={styles.container}>
-            <Text style={styles.text}>Home</Text>
+        <View style={{flex:1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'green'}}>
+            <Text>Details Screen</Text>
             <Button 
                 title="Ir a Detalle"
                 onPress={() => navigation.navigate('Details')}
             />
-            
         </View>
     );
 }
 
-export default HomeScreen;
+export default DetailScreen;
