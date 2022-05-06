@@ -57,19 +57,6 @@ function DetailScreen({route, navigation}) {
     )
 }
 
-// function Tareas() {
-//     return(
-//         <View style={styles.container}>
-//         <StatusBar hidden={true}/>
-//         {
-//             boxes.map( v => (
-//                 <Box key = {v}>#{v}</Box>
-//             ))
-//         }
-//     </View>
-//     );
-// }
-
 const styles = StyleSheet.create({
     containerButton: {
         flexDirection: 'row',
