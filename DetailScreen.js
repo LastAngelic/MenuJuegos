@@ -1,36 +1,79 @@
 import React from 'react';
 import {StyleSheet, Button, View, Text} from 'react-native';
 
-function DetailScreen({navigation}) {
+function DetailScreen({route, navigation}) {
+
+    const {id, description} = route.params;
     return (
-        <View style={{flex:1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'green'}}>
-            <Text>Details Screen</Text>
+        <View style={{flex:1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#b2ebf2'}}>
+            {/* <Text>Descripcion: {description}</Text> */}
 
             <View style={styles.containerButton}>
                 <Button 
-                    title="Atrás"
-                    onPress={() => navigation.goBack()}
+                    title="Tarea 1"
+                    onPress={() => navigation.push('Details',
+                    {
+                        id:1,
+                        description: "Ir de compras",
+                        color: "#81b9bf",
+                    })}
                 />
                 <Button 
-                    title="Home"
-                    onPress={() => navigation.navigate('Home')}
+                    title="Tarea 2"
+                    onPress={() => navigation.push('Details',
+                    {
+                        id: 2,
+                        description: "Jugar",
+                    })}
                 />
                 <Button 
-                    title="Ir a Detalle"
-                    onPress={() => navigation.push('Details')}
+                    title="Tarea 3"
+                    onPress={() => navigation.push('Details', 
+                    {
+                        id: 3,
+                        description: "Asisitir a clase",
+                    })}
                 />
             </View>
             
+            <Button
+            title="Inicio"
+            onPress={() => navigation.popToTop()}
+            />
+
+            <View style={styles.container}>
+            {/* <StatusBar hidden={true}/> */}
+            {
+                boxes.map( v => (
+                    <Box key = {v}>#{v}</Box>
+                ))
+            }
+            </View>
+
         </View>
-    );
+        
+    )
 }
+
+// function Tareas() {
+//     return(
+//         <View style={styles.container}>
+//         <StatusBar hidden={true}/>
+//         {
+//             boxes.map( v => (
+//                 <Box key = {v}>#{v}</Box>
+//             ))
+//         }
+//     </View>
+//     );
+// }
 
 const styles = StyleSheet.create({
     containerButton: {
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center', 
-        backgroundColor: 'gray',
+        backgroundColor: '#e5ffff',
 
         margin: 20,
         padding: 5,

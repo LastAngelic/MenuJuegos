@@ -10,4 +10,15 @@ export default StyleSheet.create({
     text: {
         marginBottom: 10,
     },
+
+    box: {
+        width: 80,
+        height: 80,
+        justifyContent: 'center',
+        alignItems: 'center',
+        // alignSelf: 'stretch',
+        borderWidth: 1,
+        backgroundColor: 'lightgray',
+        margin: 10,
+    }
 })
