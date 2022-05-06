@@ -4,6 +4,8 @@ import {StyleSheet, Button, View, Text} from 'react-native';
 function DetailScreen({route, navigation}) {
 
     const {id, description} = route.params;
+    const tareas = new Array(10).fill(null).map((v, i) => i +1);
+
     return (
         <View style={{flex:1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#b2ebf2'}}>
             {/* <Text>Descripcion: {description}</Text> */}
@@ -44,7 +46,7 @@ function DetailScreen({route, navigation}) {
             <View style={styles.container}>
             {/* <StatusBar hidden={true}/> */}
             {
-                boxes.map( v => (
+                tareas.map( v => (
                     <Box key = {v}>#{v}</Box>
                 ))
             }
