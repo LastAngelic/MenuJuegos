@@ -1,10 +1,9 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-import {Text, View} from 'react-native';
+import {Text, View, Button} from 'react-native';
+import propTypes from 'prop-types';
 import styles from './styles';
 
-function Box ({children}) {
-
+const Box = ({children}) => {
     return (
         <View style={styles.box}>
             <Text style={styles.boxText}>{children}</Text>
@@ -13,7 +12,7 @@ function Box ({children}) {
 }
 
 Box.propTypes = {
-    children: PropTypes.node.isRequired
+    children: propTypes.node.isRequired
 };
 
 export default Box;

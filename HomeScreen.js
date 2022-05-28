@@ -7,12 +7,12 @@ function HomeScreen({navigation}) {
         <View style={styles.container}>
             <Text style={styles.text}>Home</Text>
             <Button 
-                title="Menu"
+                color="gold"
+                title="Go To Menu" 
                 onPress={() => navigation.navigate('Menu', {
-                    id:1,
+                    id: 1, 
                     description: 'Aqui estan todas las tareas',
-                }
-            )}
+                })} 
             />
             
         </View>
