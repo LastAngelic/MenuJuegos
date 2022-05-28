@@ -5,7 +5,7 @@ function DetailScreen({route, navigation}) {
     const {id, description} = route.params;
 
     return (
-        <View style = {{flex: 2, justifyContent: 'center', alignItems: 'center', backgroundColor: 'pink'}}>
+        <View style = {{flex: 2, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(255, 255, 255, 1.0)'}}>
             <Text style = {styles.title}>Details Screen</Text>
             <Text style = {styles.text}>Task: {id}</Text>
             <Text style = {styles.text}>Description: {description}</Text>

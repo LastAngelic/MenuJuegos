@@ -5,7 +5,7 @@ export default StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: 'rgba(255, 255, 255, 1.0)'
+        backgroundColor: 'rgba(255, 255, 255, 1.0)',
     },
 
     text: {
@@ -15,13 +15,14 @@ export default StyleSheet.create({
     },
 
     box: {
-        width: 100,
-        height: 80,
+        width: 120,
+        height: 150,
         justifyContent: 'center',
         alignItems: 'center',
         //alignSelf: 'stretch',
         borderWidth: 1,
-        backgroundColor: 'lightyellow',
+        borderColor: 'gold',
+        backgroundColor: 'rgba(255, 255, 255, 1.0)',
         margin: 10,
     },
 

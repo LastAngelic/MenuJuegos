@@ -8,11 +8,35 @@ function MenuScreen({route, navigation}) {
     const {id, description} = route.params;
 
     return (
-        <View style = {{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'pink'}}>
+        <View style = {{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(255, 255, 255, 1.0)'}}>
             
             <Column>
                 <Row>
-                    <Box>Tarea #1
+                    <Box>Juego #1
+                        <Button 
+                            color="gold"
+                            title="Hacer" 
+                            onPress={() => navigation.navigate('Details', {
+                                id: 1, 
+                                description: 'Guess the Number',
+                            })} 
+                        />
+                    </Box>
+                    <Box>Juego #2
+                        <Button 
+                            color="gold"
+                            title="Hacer" 
+                            onPress={() => navigation.navigate('Details', {
+                                id: 2, 
+                                description: 'Juego #2',
+                            })} 
+                        />
+                    </Box>
+                    
+                </Row>
+
+                <Row>
+                    <Box>Juego #3
                         <Button 
                             color="gold"
                             title="Hacer" 
@@ -22,7 +46,7 @@ function MenuScreen({route, navigation}) {
                             })} 
                         />
                     </Box>
-                    <Box>Tarea #2
+                    <Box>Juego #4
                         <Button 
                             color="gold"
                             title="Hacer" 
@@ -32,83 +56,9 @@ function MenuScreen({route, navigation}) {
                             })} 
                         />
                     </Box>
-                    <Box>Tarea #3
-                        <Button 
-                            color="gold"
-                            title="Hacer" 
-                            onPress={() => navigation.navigate('Details', {
-                                id: 3, 
-                                description: 'Ir a la escuela',
-                            })} 
-                        />
-                    </Box>
+                    
                 </Row>
 
-                <Row>
-                    <Box>Tarea #4
-                        <Button 
-                            color="gold"
-                            title="Hacer" 
-                            onPress={() => navigation.navigate('Details', {
-                                id: 4, 
-                                description: 'Comer',
-                            })} 
-                        />
-                    </Box>
-                    <Box>Tarea #5
-                        <Button 
-                            color="gold"
-                            title="Hacer" 
-                            onPress={() => navigation.navigate('Details', {
-                                id: 5, 
-                                description: 'Hacer la tarea',
-                            })} 
-                        />
-                    </Box>
-                    <Box>Tarea #6
-                        <Button 
-                            color="gold"
-                            title="Hacer" 
-                            onPress={() => navigation.navigate('Details', {
-                                id: 6, 
-                                description: 'Hacer limpieza',
-                            })} 
-                        />
-                    </Box>
-                </Row>
-
-                <Row>
-                    <Box>Tarea #7
-                        <Button 
-                            color="gold"
-                            title="Hacer" 
-                            onPress={() => navigation.navigate('Details', {
-                                id: 7, 
-                                description: 'Jugar videojuegos',
-                            })} 
-                        />
-                    </Box>
-                    <Box>Tarea #8
-                        <Button 
-                            color="gold"
-                            title="Hacer" 
-                            onPress={() => navigation.navigate('Details', {
-                                id: 8, 
-                                description: 'Cenar',
-                            })} 
-                        />
-                    </Box>
-                    <Box>Tarea #9
-                    <Button 
-                            color="gold"
-                            title="Hacer" 
-                            onPress={() => navigation.navigate('Details', {
-                                id: 9, 
-                                description: 'Bañarse',
-                            })} 
-                        />
-                    </Box>
-                </Row>
             </Column>
 
             <View style = {styles.containerButton}> 
